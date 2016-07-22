@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class myActivity extends AppCompatActivity {
 
@@ -19,6 +20,7 @@ public class myActivity extends AppCompatActivity {
         setContentView(R.layout.activity_my);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        final EditText editText= (EditText) findViewById(R.id.edit_message);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -33,6 +35,8 @@ public class myActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d("lsx","xxxxxxxxxxxxxxxxxx");
+                editText.setText("添加add content");
+
             }
         });
     }
